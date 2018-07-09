@@ -1,0 +1,13 @@
+links:
+- name: Home
+  link: /  
+- name: Portfolio
+  link: /portfolio/
+- name: Blog
+  link: https://medium.com/mystiko-labs
+- name: About
+  link: /about/
+- name: Contact
+  link: /contact/
+- name: Search
+  link: /search/

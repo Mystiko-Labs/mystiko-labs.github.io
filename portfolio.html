@@ -1,0 +1,103 @@
+---
+title: Portfolio
+heading: Our Work
+subtitle: See our awesome work
+---
+
+<section class="diagonal patterned">
+	<div align="center">
+		<h3>Categories</h3>
+	</div><br>
+	<div class="container" align="center">
+		<div>
+			<p>
+				<a href="{{ site.baseurl }}/portfolio/#apps">Apps</a> &nbsp; | &nbsp;
+				<a href="{{ site.baseurl }}/portfolio/#web">Websites </a>&nbsp; | &nbsp;
+				<a href="{{ site.baseurl }}/portfolio/#iot">IoT </a>&nbsp; | &nbsp;
+				<a href="{{ site.baseurl }}/portfolio/#ai">AI and ML</a>	
+			</p>
+		</div>
+	</div><br>
+	<div class="container">
+		<ul class="image-grid" id="apps">
+			{% for client in site.clients %}
+				{% if client.category == 'App' %}
+				<li>
+					<a href="{{ site.baseurl }}{{ client.url }}">
+						<img src="{% include relative-src.html src=client.image_path %}" alt="{{ person.name }}">
+						<div class="details">
+							<div class="name">{{ client.name }}</div>
+							<div class="position">{{ client.subtitle }}</div>
+						</div>
+					</a>
+				</li>
+				{% endif %}
+			{% endfor %}
+			<li class="filler"></li>
+			<li class="filler"></li>
+		</ul>
+
+		<ul class="image-grid" id="web">
+			{% for client in site.clients %}
+				{% if client.category == 'Web' %}
+				<li>
+					<a href="{{ site.baseurl }}{{ client.url }}">
+						<img src="{% include relative-src.html src=client.image_path %}" alt="{{ person.name }}">
+						<div class="details">
+							<div class="name">{{ client.name }}</div>
+							<div class="position">{{ client.subtitle }}</div>
+						</div>
+					</a>
+				</li>
+				{% endif %}
+			{% endfor %}
+			<li class="filler"></li>
+			<li class="filler"></li>
+		</ul>
+
+		<ul class="image-grid" id="iot">
+			{% for client in site.clients %}
+				{% if client.category == 'Iot' %}
+				<li>
+					<a href="{{ site.baseurl }}{{ client.url }}">
+						<img src="{% include relative-src.html src=client.image_path %}" alt="{{ person.name }}">
+						<div class="details">
+							<div class="name">{{ client.name }}</div>
+							<div class="position">{{ client.subtitle }}</div>
+						</div>
+					</a>
+				</li>
+				{% endif %}
+			{% endfor %}
+			<li class="filler"></li>
+			<li class="filler"></li>
+		</ul>
+
+		<ul class="image-grid" id="ai">
+			{% for client in site.clients %}
+				{% if client.category == 'Ai' %}
+				<li>
+					<a href="{{ site.baseurl }}{{ client.url }}">
+						<img src="{% include relative-src.html src=client.image_path %}" alt="{{ person.name }}">
+						<div class="details">
+							<div class="name">{{ client.name }}</div>
+							<div class="position">{{ client.subtitle }}</div>
+						</div>
+					</a>
+				</li>
+				{% endif %}
+			{% endfor %}
+			<li class="filler"></li>
+			<li class="filler"></li>
+		</ul>
+
+	</div>
+</section>
+<section class="diagonal alternate" style="background:url('{{ site.baseurl }}/images/banner-2.jpg');">
+	<div class="container">
+		<div>
+			<p class="editable"><h1>Wanna get started with your own product?</h1></p>
+			<p><a class="button" style="background:orange;color: white;" href="{{ site.baseurl }}/contact/">Contact Us</a></p>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,23 @@
+---
+title: About
+heading: Our team
+subtitle: Meet our efficient and qualified team.
+---
+
+<section class="diagonal patterned">
+	<div class="container">
+		<ul class="image-grid">
+			{% for member in site.staff_members %}
+				<li>{% include staff-member.html member=member %}</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
+<section class="diagonal alternate" style="background:url('{{site.baseurl}}/images/new.jpg');">
+	<div class="container">
+		<div>
+			<p class="editable"><h1 style="color: white;">Liked our services?</h1></p>
+			<p><a class="button" style="background:orange;color: white;" href="{{ site.baseurl }}/contact/">Hire Us</a></p>
+		</div>
+	</div>
+</section>

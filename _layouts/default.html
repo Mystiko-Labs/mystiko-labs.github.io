@@ -1,0 +1,141 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="generator" content="Jekyll v{{ jekyll.version }}">
+
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/image/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/image/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/image/favicon/favicon-16x16.png">
+	<link rel="manifest" href="{{ site.baseurl }}/image/favicon/manifest.json">
+	<link rel="mask-icon" href="{{ site.baseurl }}/image/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#d35400">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#d35400">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#d35400">
+
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/prism.css">	
+	
+	<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		#mc_embed_signup{
+			background:#fff;
+			align-items: center;
+			align-self: center;
+			font:14px Helvetica,Arial,sans-serif;
+			width:100%;
+		}
+
+	</style>
+
+	{% seo %}
+	{% feed_meta %}
+
+	{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
+		<script>
+			(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+
+			ga("create", "{{ site.google_analytics_key }}", "auto");
+			ga("send", "pageview");
+		</script>
+	{% endif %}
+
+</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h1 class="company-name"><a href="{{ site.baseurl }}/"><img src="{{site.baseurl}}/images/mystiko_labs.png" alt="Mystiko Labs" width="150"></a></h1>
+				{% include navigation.html %}
+
+			</div>
+		</header>
+		{{ content }}
+
+
+		<footer class="diagonal">
+			<div class="container">
+				<div class="footer-columns">
+					{% for column in site.data.footer %}
+						<ul class="footer-links">
+							<li>
+								<h2>{{ column.title }}</h2>
+							</li>
+							{% for link in column.links %}
+								<li>
+									<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
+										{% if link.social_icon %}
+											{% include social-icon.html icon=link.social_icon %}
+										{% endif %}
+
+										{{ link.name }}
+									</a>
+								</li>
+							{% endfor %}
+
+						</ul>
+					{% endfor %}
+
+					<ul class="footer-links">
+						<li>
+							<h2>{{ site.data.company.title }}</h2>
+						</li>
+						<li>{{ site.data.company.description }}</li>
+					</ul>
+				</div>
+
+			</div>
+			
+			<div class="legal-line">
+				<p class="container">
+					&copy; {{ site.time | date: '%Y' }} {{ site.data.company.title }}
+					&bull;
+					All rights reserved &reg;
+				</p>
+			</div>
+		</footer>
+
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.min.js"
+			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			crossorigin="anonymous"></script>
+		<script>
+			document.getElementById("open-nav").onclick = function () {
+				document.body.classList.toggle("nav-open");
+				return false;
+			};
+		</script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
+
+		<script src="{{ site.baseurl }}/js/particle.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+			  particlesJS.load('particle','{{site.baseurl}}/js/particlesjs-config.json',function(){
+			   });
+
+			  var typed = new Typed(".element", {
+			  strings: [">_Hello world^1000","We are Mystiko Labs^1000" ,"We build awesome Apps and Websites ^2000","You DREAM, We DESIGN"],
+			  // smartBackspace: true // Default value
+			  startDelay:5,
+			  typeSpeed:50,
+			  loop:true
+				});
+			});
+		</script>
+		<script src="{{ site.baseurl }}/js/prism.js"></script>
+		<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"a41d4c516c0dfd2752c83d037","lid":"b53dc8c0e2"}) })</script>
+		<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="48741337-c94a-4496-887b-b20e20945e66";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+	</body>
+</html>

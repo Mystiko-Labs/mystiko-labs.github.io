@@ -1,0 +1,98 @@
+title: Mystiko Labs
+url: "https://mystikolabs.xyz"
+baseurl: 
+google_analytics_key: UA-104134721-1
+google_maps_javascript_api_key: AIzaSyArAw-wP8mrawSNuF3dZfLbbgyjjnB-K6U
+disqus_shortname: mystiko-labs
+
+# Default description in social shares for the jekyll-seo-tag gem
+description: We build things to make this world a better place to live in.
+# Author details for the jekyll-seo-tag gem
+author:
+  name:
+  email:
+  twitter:
+
+# Social details for the jekyll-seo-tag gem
+social:
+  name: Mystiko Labs
+  links:
+    - https://mystikolabs.xyz
+
+collections:
+  staff_members:
+    output: false
+  clients:
+    output: true
+
+paginate: 8
+paginate_path: "/blog/:num/"
+permalink: pretty
+
+jekyll-archives:
+  enabled:
+    - "categories"
+
+gems:
+  - "jekyll-feed"
+  - "jekyll-seo-tag"
+  - "jekyll-paginate"
+  - "jekyll-archives"
+
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      _options:
+        content:
+          width: 960
+          height: 2000
+  - scope:
+      path: ""
+      type: "clients"
+    values:
+      layout: "client"
+      _options:
+        image_path:
+          width: 2000
+          height: 2000
+  - scope:
+      path: ""
+      type: "staff_members"
+    values:
+      _options:
+        image_path:
+          width: 600
+          height: 600
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "index.html"
+      type: "pages"
+    values:
+      layout: "default"
+
+# -----------
+# CloudCannon
+
+social_icons:
+  - Facebook
+  - Google Plus
+  - Instagram
+  - LinkedIn
+  - Pinterest
+  - Tumblr
+  - Twitter
+  - YouTube
+  - RSS
+
+
+# algolia:
+#   application_id: 'your_application_id'
+#   index_name:     'your_index_name'

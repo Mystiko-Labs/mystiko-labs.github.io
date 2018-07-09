@@ -1,0 +1,36 @@
+- title: Pages
+  links:
+    - name: Home
+      link: /
+    - name: Portfolio
+      link: /portfolio/
+    - name: Blog
+      link: https://medium.com/mystiko-labs
+    - name: About
+      link: /about/
+    - name: Contact
+      link: /contact/
+    - name: Search
+      link: /search/
+- title: Social
+  links:
+    - name: Facebook
+      link:
+      social_icon: Facebook
+      new_window: true
+    - name: Twitter
+      link: https://twitter.com/MystikoLabs
+      social_icon: Twitter
+      new_window: true
+    - name: Instagram
+      link: https://www.instagram.com/mystikolabs/
+      social_icon: Instagram
+      new_window: true
+    - name: LinkedIn
+      link: https://www.linkedin.com/company/mystiko-labs/
+      social_icon: LinkedIn
+      new_window: true
+    - name: RSS
+      link: /feed.xml
+      social_icon: RSS
+      new_window: true

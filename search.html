@@ -1,0 +1,41 @@
+---
+title: Search
+heading: search here 
+---
+
+<section class="diagonal">
+	<div class="container">
+		<form action="{{ site.baseurl }}/search/" method="get" class="contact-form">
+
+			<label for="search">Type query... </label>
+			<input type="text" name="query" id="search-box" placeholder="what is...?" required />
+
+			<div class="halves">
+				<div>
+			<input type="submit" value="Search" />
+			</div>
+			</div>
+		</form>
+
+		<ul id="search-results">
+			
+		</ul>
+
+	</div>
+</section>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>
+  window.store = {
+    {% for post in site.posts %}
+      "{{ post.url | slugify }}": {
+        "title": "{{ post.title | xml_escape }}",
+        "author": "{{ post.author | xml_escape }}",
+        "category": "{{ post.category | xml_escape }}",
+        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+        "url": "{{ post.url | xml_escape }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+</script>
+<script src="{{ site.baseurl }}/js/search.js"></script>
