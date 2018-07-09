@@ -92,6 +92,9 @@ social_icons:
   - YouTube
   - RSS
 
+include: [_pages]
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "config.ru", "Gemfile.lock", "vendor", "Procfile", "Rakefile", "Gemfile"]
+
 
 # algolia:
 #   application_id: 'your_application_id'

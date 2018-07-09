@@ -37,6 +37,7 @@ GEM
     pathutil (0.16.0)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.1)
+    puma (3.11.4)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -58,6 +59,7 @@ DEPENDENCIES
   jekyll-feed (= 0.6.0)
   jekyll-paginate (= 1.1.0)
   jekyll-seo-tag (= 2.0.0)
+  puma
 
 BUNDLED WITH
-   1.16.0
+   1.16.2
