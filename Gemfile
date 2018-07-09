@@ -8,4 +8,7 @@ group :jekyll_plugins do
 	gem 'jekyll-paginate', '1.1.0'
 	gem 'jekyll-archives', '2.1.1'
 	gem 'puma'
+	gem 'rack-jekyll'
+	gem 'bundler'
+	gem 'rake'
 end
